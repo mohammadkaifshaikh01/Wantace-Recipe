@@ -26,7 +26,7 @@ console.log("1")
       description,
     };
     console.log(newRecipe)
-    axios.post("http://localhost:5000/add", newRecipe)
+    axios.post("https://wantace-recipe.onrender.com/add", newRecipe)
       .then(() => {
         alert("Recipe added successfully!");
         setName("");

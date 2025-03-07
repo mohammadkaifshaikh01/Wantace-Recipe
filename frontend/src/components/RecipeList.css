@@ -409,3 +409,16 @@ li h3 {
 .recipe-list.dark p {
   color: white;
 }
+
+.filter{
+  background-color: #444;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+.filter:hover{
+  background-color: #c76969;
+}

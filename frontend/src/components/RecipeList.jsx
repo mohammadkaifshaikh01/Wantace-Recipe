@@ -20,7 +20,7 @@ const RecipeList = () => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all")
+      .get("https://wantace-recipe.onrender.com/all")
       .then((response) => setRecipes(response.data.getFoods))
       .catch((error) => console.error("Error fetching recipes:", error));
   }, []);
@@ -63,7 +63,7 @@ const RecipeList = () => {
   // Update Recipe Functionality
   const handleUpdateSubmit = () => {
     axios
-      .patch(`http://localhost:5000/update/${updateRecipe._id}`, updateRecipe)
+      .patch(`https://wantace-recipe.onrender.com/update/${updateRecipe._id}`, updateRecipe)
       .then(() => {
         setRecipes((prev) =>
           prev.map((r) => (r._id === updateRecipe._id ? updateRecipe : r))
@@ -116,6 +116,7 @@ const RecipeList = () => {
         </>
       )}
 
+<button className="filter">Sort By Category</button>
       {/* Drag and Drop List */}
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="recipes">
