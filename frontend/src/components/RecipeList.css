@@ -1,0 +1,411 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  margin: 0;
+  padding: auto;
+}
+body{
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.recipe-list {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.recipe-list h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: black;
+  position: relative;
+}
+
+
+.random-recipe {
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+.random-recipe ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 70%;
+}
+
+.random-recipe li {
+  /* max-width: 90%; */
+  width: 100%;
+  cursor: default;
+  border: 2px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  /* transition: transform 0.2s ease-in-out; */
+}
+
+
+
+.random-recipe li img {
+  width: 90%;
+  height: 200px;
+  padding: auto;
+
+  object-fit: cover;
+  border-bottom: 2px solid gray;
+}
+
+.random-recipe-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.random-recipe h3 {
+  font-size: 1.3rem;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  margin: 0;
+  color: #333;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(78, 205, 196, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(78, 205, 196, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(78, 205, 196, 0);
+  }
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+
+}
+
+li {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: #373030 2px solid;
+  cursor: pointer;
+  position: relative;
+}
+
+li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+li:hover::before {
+  opacity: 1;
+}
+
+li::before {
+  content: 'Check Details';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: orange;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  opacity: 0;
+  z-index: 1;
+}
+
+li img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+li:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+li h3 {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: black;
+  margin: 0;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: black;
+  transition:ease;
+}
+
+.close-button:hover {
+  color:#ff5252;
+
+}
+
+.modal-content h2 {
+  color:rgb(0, 0, 0);
+  margin-top: 0;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.modal-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.modal-content button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0;
+}
+
+.modal-content button:hover {
+  background-color: #ff5252;
+  /* transform: translateY(-3px); */
+}
+
+
+.edit-recipe-container {
+  padding: 1rem 0;  
+  
+
+}
+
+.edit-recipe-title {
+  margin-bottom: 1.5rem !important;
+}
+
+.edit-recipe-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: black;
+}
+
+.edit-recipe-input,
+.edit-recipe-textarea {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  color: #554747;
+  margin-bottom: 1rem;
+  border: 2px solid #564b4b;
+  border-radius: 8px;
+  font-size: 1rem;
+
+}
+
+
+.edit-recipe-textarea {
+  min-height: 120px;
+  
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .recipe-list {
+    padding: 1rem;
+  }
+}
+
+
+.surprise-button {
+  background-color: #3dbeb6;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 auto 2.5rem;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+
+.surprise-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+}
+
+
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark Mode Styles */
+.recipe-list.dark {
+  background-color: #222;
+  color: white;
+}
+
+.recipe-list.dark h2 {
+  color: white;
+}
+
+.recipe-list.dark .random-recipe-title {
+  color: white;
+}
+
+.toggle-theme {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.toggle-theme:hover {
+  background: #555;
+}
+
+/* Dark Mode Item Styles */
+.dark-item {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+.dark-item h3 {
+  color: #eee !important;
+}
+
+.dark-item::before {
+  background-color: #ff6b00 !important;
+}
+
+/* Dark Mode Modal Styles */
+.dark-modal {
+  background-color: #333;
+  color: white;
+}
+
+.dark-modal h2 {
+  color: white !important;
+  border-bottom-color: #555;
+}
+
+.dark-modal p {
+  color: #ddd !important;
+}
+
+.dark-modal .close-button {
+  color: white;
+}
+
+.dark-modal .edit-recipe-label {
+  color: white;
+}
+
+.dark-text {
+  color: #fff !important;
+}
+
+/* Dark Mode Input Styles */
+.dark-input {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark-input::placeholder {
+  color: #aaa;
+}
+
+/* Dark Mode for "No recipes found" text */
+.recipe-list.dark p {
+  color: white;
+}

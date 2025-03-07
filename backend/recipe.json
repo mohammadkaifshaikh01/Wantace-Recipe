@@ -1,0 +1,73 @@
+[
+   {
+     "name": "Paneer Butter Masala",
+     "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmyfoodstory.com%2Frestaurant-style-paneer-butter-masala-recipe%2F&psig=AOvVaw1LPQt2pdyrfy-bzw5bmtmi&ust=1741341639328000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJies6GZ9YsDFQAAAAAdAAAAABAE",
+     "ingredients": "paneer, butter, tomato, cream",
+     "category": "Vegetarian",
+     "description": "A rich and creamy tomato-based curry with paneer cubes."
+   },
+   {
+     "name": "     Rogan Josh",
+     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpvrhP0XQkWl_0Ti2TRumM5D9HKUFLvUeTmvgFqingINqgmu7JqifyCsWyrz3NCUAg-YuqqJ6xPPlp0vpyKyg5C1iXgPrpzpJeptWQWZrfPoeUBQkFmjYeRUuDfUVcgqu9ugI8B5HxmS8/s1600/Mutton+Rogan+Josh+Recipe.JPG",
+     "ingredients": "mutton, yogurt, spices",
+     "category": "Non-Vegetarian",
+     "description": "A flavorful and aromatic Kashmiri mutton curry."
+   },
+   {
+     "name": "Veg Pulao",
+     "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2018/07/pulao-recipe-500x500.jpg",
+     "ingredients": "rice, vegetables, spices",
+     "category": "Vegetarian",
+     "description": "A fragrant one-pot rice dish cooked with vegetables and spices."
+   },
+   {
+     "name": "Fish Curry",
+     "image": "https://www.licious.in/blog/wp-content/uploads/2022/03/shutterstock_1891229335-min-750x750.jpg",
+     "ingredients": "fish, coconut milk, spices",
+     "category": "Non-Vegetarian",
+     "description": "A tangy and spicy fish curry made with coconut milk and Indian spices."
+   },
+   {
+     "name": "Chole Bhature",
+     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfASvVyiKEVJAU0syB1WHKaCFjlI5mXoiO5A&s",
+     "ingredients": "chickpeas, flour, spices",
+     "category": "Vegetarian",
+     "description": "A popular North Indian dish consisting of spicy chickpeas and deep-fried bread."
+   },
+   {
+     "name": "Tandoori Chicken",
+     "image": "https://sinfullyspicy.com/wp-content/uploads/2014/07/1200-by-1200-images-2.jpg",
+     "ingredients": "chicken, yogurt, spices",
+     "category": "Non-Vegetarian",
+     "description": "Marinated chicken roasted in a tandoor for a smoky flavor."
+   },
+   {
+     "name": "Dal Tadka",
+     "image": "https://vegecravings.com/wp-content/uploads/2018/01/Dal-Tadka-Recipe-Step-By-Step-Instructions.jpg",
+     "ingredients": "lentils, garlic, ghee",
+     "category": "Vegetarian",
+     "description": "A comforting Indian lentil dish tempered with aromatic spices."
+   },
+   {
+     "name": "Butter Naan",
+     "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/butter-naan.jpg",
+     "ingredients": "flour, butter, yeast",
+     "category": "Vegetarian",
+     "description": "A soft and fluffy Indian bread brushed with butter."
+   },
+   {
+     "name": "Gulab Jamun",
+     "image": "https://www.chefadora.com/_next/image?url=https%3A%2F%2Fchefadora.b-cdn.net%2F003f0f0351967a7cb6212a8d9bfaf889_f956154e73.jpg&w=3840&q=75",
+     "ingredients": "milk solids, sugar syrup",
+     "category": "Dessert",
+     "description": "Soft and spongy milk-based sweet dumplings soaked in sugar syrup."
+   },
+   {
+     "name": "Rasmalai",
+     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRAo3kz8rMjy7saXJWEjopLUr3Arq6h1TMaQ&s",
+     "ingredients": "paneer, milk, saffron",
+     "category": "Dessert",
+     "description": "Soft paneer discs soaked in flavored sweetened milk."
+   }
+ ]
+ 
